@@ -1,22 +1,42 @@
 # Charles von Lehe — Engineering portfolio
 
-A standalone, responsive portfolio tailored to product/frontend roles like Fomo's Staff Frontend Engineer opening. It is a single-page HTML site that requires no build tools, framework, or remote assets.
+A React portfolio built with Vite. The production build prerenders the page into HTML, so the content and native case-study disclosure panels are available before JavaScript loads.
 
-## Open it
+## Run locally
 
-Double-click `index.html` to preview locally in a browser. `Charles_von_Lehe_Resume.pdf` is linked from the page and included alongside it.
+Requires Node.js 22.12+.
 
-## Publish it
+```sh
+npm ci
+npm run dev
+```
 
-Upload the contents of this folder (not the enclosing folder itself) to the root of a GitHub Pages repository or to any static-hosting service, such as Netlify or Cloudflare Pages. No compilation is required.
+Open the local URL printed by Vite. The résumé PDF is served from `public/`.
 
-## Customize it before publishing
+## Build and publish
+
+```sh
+npm run build
+npm run preview
+```
+
+Publish the **contents of `dist/`** to a static host. The build uses relative asset paths, so it works at the domain root or under a project path. Deploying the source directory directly will not work.
+
+### GitHub Pages
+
+This repository includes `.github/workflows/deploy.yml`. It builds the site and publishes `dist/` whenever a commit reaches `main`.
+
+The current GitHub Pages source is `main` at the repository root. To switch it to the React build:
+
+1. In [repository Pages settings](https://github.com/cvlehe/portfolio/settings/pages), change **Build and deployment → Source** to **GitHub Actions**.
+2. Commit and push the React conversion and deployment workflow to `main`.
+3. Check the **Deploy portfolio to GitHub Pages** run in the repository's Actions tab. After it succeeds, the site is at <https://cvlehe.github.io/portfolio/>.
+
+## Customize
 
 - Add a LinkedIn or GitHub URL only if you want it visible; no links were guessed.
-- For additional credibility, replace the conceptual diagrams with screenshots you have permission to publish, or add public GitHub demos.
-- Add reliable project metrics (e.g., adoption, performance improvements, rollout scope) where you can substantiate them. None are invented here.
+- Replace the conceptual diagrams with screenshots you have permission to publish, or add public GitHub demos.
+- Add reliable project metrics only where you can substantiate them.
 - Verify descriptions of employer projects against your confidentiality obligations.
-
-## Notes
 
 Project diagrams are intentionally illustrative; they are not screenshots or internal system diagrams. SlicerMD is explicitly identified as a personal work in progress.
