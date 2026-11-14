@@ -49,13 +49,11 @@
   padding: 10px;
 }
 
-.resume-viewer iframe {
+.resume-viewer img {
   background: #fff;
-  border: 0;
   border-radius: 11px;
   display: block;
-  height: min(82vh, 1120px);
-  min-height: 620px;
+  height: auto;
   width: 100%;
 }
 
@@ -93,9 +91,8 @@
     border-radius: 14px;
   }
 
-  .resume-viewer iframe {
+  .resume-viewer img {
     border-radius: 9px;
-    min-height: 540px;
   }
 }
 

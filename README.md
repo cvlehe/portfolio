@@ -1,6 +1,6 @@
 # Charles von Lehe — Engineering portfolio
 
-A React portfolio built with Vite. The production build prerenders both the homepage and `/resume/` into HTML, so the content and native case-study disclosure panels are available before JavaScript loads. The résumé page displays the PDF in the browser and keeps a download link.
+A React portfolio built with Vite. The production build prerenders both the homepage and `/resume/` into HTML, so the content and native case-study disclosure panels are available before JavaScript loads. The résumé page displays a preview rendered from the PDF and keeps links to open or download the original.
 
 ## Run locally
 
@@ -12,6 +12,12 @@ npm run dev
 ```
 
 Open the local URL printed by Vite. The résumé PDF is served from `public/`.
+
+When replacing the résumé PDF, regenerate its one-page preview with Poppler:
+
+```sh
+pdftoppm -f 1 -l 1 -singlefile -r 160 -png public/Charles_von_Lehe_Resume.pdf public/resume-preview
+```
 
 ## Build and publish
 
@@ -26,11 +32,7 @@ Publish the **contents of `dist/`** to a static host. The build uses relative as
 
 This repository includes `.github/workflows/deploy.yml`. It builds the site and publishes `dist/` whenever a commit reaches `main`.
 
-The current GitHub Pages source is `main` at the repository root. To switch it to the React build:
-
-1. In [repository Pages settings](https://github.com/cvlehe/portfolio/settings/pages), change **Build and deployment → Source** to **GitHub Actions**.
-2. Commit and push the React conversion and deployment workflow to `main`.
-3. Check the **Deploy portfolio to GitHub Pages** run in the repository's Actions tab. After it succeeds, the site is at <https://cvlehe.github.io/portfolio/>.
+GitHub Pages is configured to deploy with GitHub Actions. Push to `main`, then check the **Deploy portfolio to GitHub Pages** run in the repository's Actions tab. The site is at <https://cvlehe.github.io/portfolio/>.
 
 ## Customize
 

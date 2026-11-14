@@ -47,10 +47,15 @@ export default function ResumePage() {
         <section className="resume-viewer-section" aria-label="Résumé preview">
           <div className="shell">
             <div className="resume-viewer">
-              <iframe src={resumeUrl} title="Charles von Lehe résumé PDF" />
+              <img
+                src="../resume-preview.png"
+                alt="Preview of Charles von Lehe's one-page résumé"
+                width="1360"
+                height="1760"
+              />
             </div>
             <p className="resume-fallback">
-              If the preview is unavailable on your device,{" "}
+              Want to zoom in or select text?{" "}
               <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 open the PDF in a new tab
               </a>
