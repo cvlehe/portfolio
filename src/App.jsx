@@ -13,6 +13,7 @@ function Header() {
           <a href="#work">Selected work</a>
           <a href="#approach">How I work</a>
           <a href="#experience">Experience</a>
+          <a href="resume/">Résumé</a>
           <a href="#contact">Contact</a>
         </nav>
         <a
@@ -48,12 +49,8 @@ function Hero() {
                 ↘
               </span>
             </a>
-            <a
-              className="btn btn-outline"
-              href="Charles_von_Lehe_Resume.pdf"
-              download
-            >
-              Download résumé <span aria-hidden="true">↓</span>
+            <a className="btn btn-outline" href="resume/">
+              View résumé <span aria-hidden="true">↗</span>
             </a>
           </div>
           <p className="hero-note">
@@ -557,12 +554,8 @@ function Contact() {
           >
             Email me <span aria-hidden="true">↗</span>
           </a>
-          <a
-            className="btn btn-outline"
-            href="Charles_von_Lehe_Resume.pdf"
-            download
-          >
-            Download résumé <span aria-hidden="true">↓</span>
+          <a className="btn btn-outline" href="resume/">
+            View résumé <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>

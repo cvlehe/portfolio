@@ -1,6 +1,6 @@
 # Charles von Lehe — Engineering portfolio
 
-A React portfolio built with Vite. The production build prerenders the page into HTML, so the content and native case-study disclosure panels are available before JavaScript loads.
+A React portfolio built with Vite. The production build prerenders both the homepage and `/resume/` into HTML, so the content and native case-study disclosure panels are available before JavaScript loads. The résumé page displays the PDF in the browser and keeps a download link.
 
 ## Run locally
 
