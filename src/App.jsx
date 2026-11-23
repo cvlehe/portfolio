@@ -136,9 +136,8 @@ function Work() {
             <h2 id="work-title">What I've built.</h2>
           </div>
           <p className="section-blurb">
-            Four examples of production work. The diagrams explain engineering
-            boundaries and are illustrative — not actual application screenshots
-            or internal architecture documents.
+            Four examples of professional work and one independent full-stack
+            project. The diagrams illustrate engineering boundaries.
           </p>
         </div>
         <div className="case-grid">
@@ -394,6 +393,83 @@ function Work() {
                   </p>
                 </div>
               </details>
+            </div>
+          </article>
+          <article className="case case-purple">
+            <div className="case-graphic">
+              <div
+                className="diagram compact"
+                aria-label="Illustrative architecture for the Loo York Times full-stack project"
+              >
+                <span className="node">
+                  <small>Web app</small>Next.js
+                </span>
+                <span className="connector" aria-hidden="true">
+                  ↔
+                </span>
+                <span className="node">
+                  <small>Data &amp; auth</small>Supabase
+                </span>
+                <span className="connector" aria-hidden="true">
+                  →
+                </span>
+                <span className="node">
+                  <small>Workflow</small>Review / publish
+                </span>
+              </div>
+            </div>
+            <div className="case-body">
+              <div className="case-meta">
+                <span>05 / Independent project</span>
+                <span>AI-assisted · Open source</span>
+              </div>
+              <h3>Loo York Times: an NYC restroom finder.</h3>
+              <p>
+                Built an AI-assisted, full-stack Next.js application for finding
+                New York City public restrooms, submitting locations, and
+                reviewing community contributions before publication.
+              </p>
+              <div className="chips">
+                <span className="chip">Next.js</span>
+                <span className="chip">TypeScript</span>
+                <span className="chip">Supabase</span>
+                <span className="chip">Auth / RLS</span>
+                <span className="chip">Data import</span>
+              </div>
+              <details>
+                <summary>Read the engineering story</summary>
+                <div className="details-body">
+                  <p>
+                    <strong>Product.</strong> Public restroom discovery,
+                    ratings, submissions, and administrator moderation.
+                  </p>
+                  <p>
+                    <strong>Technical approach.</strong> Next.js frontend with
+                    Supabase storage, authentication, and row-level permissions,
+                    plus workflows for importing and verifying public data.
+                  </p>
+                  <p>
+                    <strong>Role.</strong> Directed and evaluated AI-assisted
+                    implementation, including integration decisions and the
+                    end-to-end product workflow.
+                  </p>
+                </div>
+              </details>
+              <p style={{ marginTop: 16 }}>
+                <a
+                  href="https://github.com/cvlehe/loo-york-times"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "var(--mint)",
+                    fontWeight: 750,
+                    textDecoration: "underline",
+                    textUnderlineOffset: 4,
+                  }}
+                >
+                  View public source on GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </p>
             </div>
           </article>
         </div>
